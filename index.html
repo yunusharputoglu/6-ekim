@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zührenaz & Yunus Emre | Yıldönümümüz Kutlu Olsun SEVGİLİM İYİ Kİ SEN❤️</title>
+    <title>Zührenaz & Yunus Emre | Yıldönümümüz Kutlu Olsun SEVGİLİM</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,7 +35,7 @@
         <div class="player-card">
             <div class="player-info">🎵 Şarkımız.. : Azer Bülbül - Ben Seninle Mutluyum</div>
             <audio id="myAudio" controls loop preload="auto">
-                <source src="Azer-Bulbul-Ben-Seninle-Mutluyum.mp3" type="audio/mpeg">
+                <source src="https://ia800902.us.archive.org/27/items/azer-bulbul-ben-seninle-mutluyum/Azer%20B%C3%BClb%C3%BCl%20-%20Ben%20Seninle%20Mutluyum.mp3" type="audio/mpeg">
             </audio>
         </div>
 
@@ -72,4 +72,34 @@
             <h3 style="color: #d63384; margin-bottom: 10px;">Sevgilim Zührenaz'a, ❤️</h3>
             <p>Hayatıma girdiğin ilk andan itibaren her günümü daha anlamlı, her anımı daha özel kıldın. Birlikte güldüğümüz, büyüdüğümüz ve anılar biriktirdiğimiz bu yolda seninle olduğum için çok mutluyum İYİ Kİ SEN AŞK.</p>
             <p style="margin-top: 10px;">İyi ki varsın, iyi ki benimlesin. Yıldönümümüz kutlu olsun sevgilim! NİCE BERABER SENELERİMİZE İNŞALLAHH.</p>
-            <p style="margin-top: 15px; font-weight: 600; text-align: right; color: #d63384;">Seni Çok
+            <p style="margin-top: 15px; font-weight: 600; text-align: right; color: #d63384;">Seni Çok Seven ve Her Zaman Yanında Olacak Yunus Balığın...</p>
+        </div>
+    </div>
+
+    <script>
+        const startDate = new Date('2024-10-06T00:00:00');
+
+        function updateTimers() {
+            const now = new Date();
+            const diffPassed = now - startDate;
+            document.getElementById('passed-time').innerHTML = `${Math.floor(diffPassed / (1000 * 60 * 60 * 24))} Gün ${Math.floor((diffPassed / (1000 * 60 * 60)) % 24)} Saat ${Math.floor((diffPassed / 1000 / 60) % 60)} Dakika ${Math.floor((diffPassed / 1000) % 60)} Saniye`;
+            document.getElementById('stat-hours').innerText = Math.floor(diffPassed / (1000 * 60 * 60)).toLocaleString('tr-TR');
+            document.getElementById('stat-minutes').innerText = Math.floor(diffPassed / (1000 * 60)).toLocaleString('tr-TR');
+            document.getElementById('stat-seconds').innerText = Math.floor(diffPassed / 1000).toLocaleString('tr-TR');
+            let nextAnniversary = new Date(now.getFullYear(), 9, 6);
+            if (now > nextAnniversary) { nextAnniversary.setFullYear(now.getFullYear() + 1); }
+            const diffRemaining = nextAnniversary - now;
+            document.getElementById('remaining-time').innerHTML = `${Math.floor(diffRemaining / (1000 * 60 * 60 * 24))} Gün ${Math.floor((diffRemaining / (1000 * 60 * 60)) % 24)} Saat ${Math.floor((diffRemaining / 1000 / 60) % 60)} Dakika ${Math.floor((diffRemaining / 1000) % 60)} Saniye`;
+        }
+        setInterval(updateTimers, 1000);
+        updateTimers();
+
+        document.addEventListener('click', function() {
+            var audio = document.getElementById('myAudio');
+            if (audio.paused) {
+                audio.play();
+            }
+        }, { once: true });
+    </script>
+</body>
+</html>
